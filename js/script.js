@@ -24,9 +24,14 @@ const app = new Vue({
                 done: false,
             }
         ],
+    },
 
-        methods: {
+    methods: {
 
+        toDoCheck(object) {
+            if (object.done === true) {
+                return "line";
+            }
         }
     }
 
