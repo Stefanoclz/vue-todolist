@@ -4,21 +4,41 @@
     padding: 0;
 }
 
+body {
+    background-color: navy;
+}
+
 .container {
     text-align: center;
-    margin: 20px 0px;
+    width: 50%;
+    margin: 40px auto;
 }
 
 .container h1 {
     margin-bottom: 40px;
-    background-color: bisque;
+    background-color: lightskyblue;
+    border-radius: 25px;
 }
 
 .container li {
     margin: 20px 0px;
     font-size: 25px;
+    color: white;
+    cursor: pointer;
+    list-style-type: none;
+    transition: 0.5s ease-in font-size;
 }
 
 .line {
     text-decoration: line-through;
+}
+
+input {
+    margin: 20px 0px;
+    background-color: mintcream;
+    border: 1px solid lightgray;
+}
+
+.container li:hover {
+    font-size: 30px;
 }
