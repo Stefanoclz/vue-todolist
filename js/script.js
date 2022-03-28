@@ -24,6 +24,8 @@ const app = new Vue({
                 done: false,
             }
         ],
+
+        doneList: [],
     },
 
     methods: {
@@ -32,7 +34,13 @@ const app = new Vue({
             if (object.done === true) {
                 return "line";
             }
+        },
+
+        taskDone(object) {
+            object.done = true;
+            this.doneList.push(object);
         }
+
     }
 
 })

@@ -20,7 +20,8 @@
             <h1>ToDo List</h1>
 
             <ul>
-                <li v-for="(object, index) in list" :class="toDoCheck(object)">
+                <li v-for="(object, index) in list" v-if="object.done === false" :class="toDoCheck(object)">
+                    <i class="fa-solid fa-xmark" @click="taskDone(object)"></i>
                     {{ object.text }}
                 </li>
             </ul>
