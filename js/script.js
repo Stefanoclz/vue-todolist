@@ -26,6 +26,7 @@ const app = new Vue({
         ],
 
         doneList: [],
+        task: '',
     },
 
     methods: {
@@ -39,6 +40,16 @@ const app = new Vue({
         taskDone(object) {
             object.done = true;
             this.doneList.push(object);
+        },
+
+        addTask() {
+            if (this.task.length > 0) {
+                let newTask = {
+                    text: this.task,
+                    done: false,
+                }
+                this.list.push(newTask);
+            }
         }
 
     }
