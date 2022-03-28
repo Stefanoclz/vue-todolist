@@ -16,6 +16,12 @@
         <div class="container">
             <h1>ToDo List</h1>
 
+            <ul>
+                <li v-for="object in list" v-if="object.done === false">
+                    {{ object.text }}
+                </li>
+            </ul>
+
 
         </div>
     </div>
