@@ -26,7 +26,8 @@
                 </li>
             </ul>
 
-            <input type="text" v-model="task" placeholder="Inserisci il prossimo compito da svolgere">
+            <input @keyup.enter="addTask()" type="text" v-model="task"
+                placeholder="Inserisci il prossimo compito da svolgere">
 
             <button @click="addTask()">Aggiungi</button>
 
