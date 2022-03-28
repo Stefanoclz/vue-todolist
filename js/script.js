@@ -37,9 +37,11 @@ const app = new Vue({
             }
         },
 
-        taskDone(object) {
-            object.done = true;
+        taskDone(object, objIndex) {
+            object.done === true;
             this.doneList.push(object);
+            console.log('list', this.list);
+            console.log('doneList', this.doneList);
         },
 
         addTask() {
