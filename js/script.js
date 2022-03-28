@@ -43,12 +43,14 @@ const app = new Vue({
         },
 
         addTask() {
-            if (this.task.length > 0) {
+            let taskCheck = this.task.trim();
+            if (taskCheck.length > 0) {
                 let newTask = {
                     text: this.task,
                     done: false,
                 }
                 this.list.push(newTask);
+                this.task = '';
             }
         }
 
