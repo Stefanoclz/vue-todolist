@@ -52,6 +52,14 @@ const app = new Vue({
                 this.list.push(newTask);
                 this.task = '';
             }
+        },
+
+        invertBoolean(object) {
+            if (object.done === false) {
+                object.done = true;
+            } else {
+                object.done = false;
+            }
         }
 
     }

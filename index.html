@@ -20,7 +20,8 @@
             <h1>ToDo List</h1>
 
             <ul>
-                <li v-for="(object, index) in list" v-if="object.done === false" :class="toDoCheck(object)">
+                <li v-for="(object, index) in list" v-if="object.done === false" :class="toDoCheck(object)"
+                    @click="invertBoolean(object)">
                     <i class="fa-solid fa-xmark" @click="taskDone(object)"></i>
                     {{ object.text }}
                 </li>
@@ -30,6 +31,14 @@
                 placeholder="Inserisci il prossimo compito da svolgere">
 
             <button @click="addTask()">Aggiungi</button>
+
+            <ul>
+                <li v-for="(object, index) in list" v-if="object.done === true" :class="toDoCheck(object)"
+                    @click="invertBoolean(object)">
+                    <i class="fa-solid fa-check"></i>
+                    {{ object.text }}
+                </li>
+            </ul>
 
         </div>
     </div>
